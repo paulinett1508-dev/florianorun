@@ -60,12 +60,16 @@ As inscrições são gerenciadas pelo **Runtra** (externo):
 - Não temos banco, auth ou pagamento no nosso lado
 
 ## Referências de qualidade (agnostic-core)
-Consulte `github.com/paulinett1508-dev/agnostic-core` para padrões aplicados:
-- `skills/frontend/seo-checklist` — SEO técnico e Core Web Vitals
-- `skills/frontend/accessibility` — WCAG 2.1 AA checklist
-- `skills/frontend/ux-guidelines` — UX e touch targets
-- `skills/frontend/tailwind-patterns` — Tailwind v4 patterns
-- `skills/frontend/css-governance` — Tokens e governança CSS
+Integrado como git submodule em `.agnostic-core/`. Consulte antes de alterar frontend:
+- `.agnostic-core/skills/frontend/seo-checklist.md` — SEO técnico e Core Web Vitals
+- `.agnostic-core/skills/frontend/accessibility.md` — WCAG 2.1 AA checklist
+- `.agnostic-core/skills/frontend/ux-guidelines.md` — UX e touch targets (44x44px)
+- `.agnostic-core/skills/frontend/tailwind-patterns.md` — Tailwind v4 patterns
+- `.agnostic-core/skills/frontend/css-governance.md` — Tokens e governança CSS
+- `.agnostic-core/skills/frontend/html-css-audit.md` — Auditoria HTML/CSS
+- `.agnostic-core/skills/performance/` — Caching, load testing, performance audit
+- `.agnostic-core/skills/security/` — OWASP, API hardening
+- `.agnostic-core/commands/workflows/` — Brainstorm, create, debug, deploy
 
 ## SEO Estruturado
 - JSON-LD `SportsEvent` em `layout.tsx` (rich results do Google)
