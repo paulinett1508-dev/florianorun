@@ -38,9 +38,8 @@ export default function About() {
           <p className="text-white/70 font-body text-base sm:text-lg leading-relaxed">
             A <span className="text-orange-vibrant font-semibold">Floriano Run</span> nasceu
             em 2022 com o propósito de promover saúde, esporte e integração na cidade de Floriano.
-            Idealizada pelo professor{" "}
-            <span className="text-white/90 font-medium">{EVENT.organizer}</span> e pela
-            fisioterapeuta{" "}
+            Idealizada pelo {EVENT.organizerRole}{" "}
+            <span className="text-white/90 font-medium">{EVENT.organizer}</span> e pela {EVENT.coOrganizerRole}{" "}
             <span className="text-white/90 font-medium">{EVENT.coOrganizer}</span>, a corrida
             se transformou em um dos maiores eventos esportivos da região, atraindo
             atletas de diversos estados do Brasil.

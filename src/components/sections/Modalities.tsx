@@ -1,8 +1,8 @@
-import { Footprints, Zap, Trophy } from "lucide-react";
+import { Footprints, Zap, Trophy, Baby, Heart } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
-import { MODALITIES, EVENT } from "@/lib/constants";
+import { MODALITIES, KIDS_CATEGORIES, EVENT } from "@/lib/constants";
 
 const icons = {
   walking: Footprints,
@@ -26,6 +26,7 @@ export default function Modalities() {
           Modalidades
         </SectionHeading>
 
+        {/* Adult modalities */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {MODALITIES.map((mod) => {
             const Icon = icons[mod.icon as keyof typeof icons];
@@ -60,6 +61,11 @@ export default function Modalities() {
                     </span>
                   </div>
 
+                  {/* Start time */}
+                  <p className="text-white/40 text-xs font-body">
+                    Largada: {mod.startTime}
+                  </p>
+
                   {/* Description */}
                   <p className="font-body text-sm text-white/60 leading-relaxed">
                     {mod.description}
@@ -86,6 +92,45 @@ export default function Modalities() {
               </div>
             );
           })}
+        </div>
+
+        {/* Kids & Teens */}
+        <div className="mt-16">
+          <h3 className="font-heading text-2xl sm:text-3xl font-bold italic text-center text-white uppercase mb-2">
+            Kids & Teens
+          </h3>
+          <p className="text-center text-white/50 text-sm font-body mb-8">
+            Sem finalidade competitiva — todos recebem medalha de conclusão!
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+            {KIDS_CATEGORIES.map((cat) => (
+              <div
+                key={`${cat.title}-${cat.distance}`}
+                className="p-5 rounded-xl bg-white/5 border border-white/10 text-center hover:border-purple-500/30 transition-colors"
+              >
+                <div className="w-10 h-10 mx-auto rounded-full bg-purple-500/20 flex items-center justify-center mb-3">
+                  {cat.title === 'Teens' ? (
+                    <Heart className="w-5 h-5 text-purple-400" />
+                  ) : (
+                    <Baby className="w-5 h-5 text-purple-400" />
+                  )}
+                </div>
+                <p className="font-heading font-black text-2xl text-white">
+                  {cat.distance}
+                </p>
+                <p className="font-heading font-bold text-sm text-purple-400 uppercase mt-1">
+                  {cat.title}
+                </p>
+                <span className="inline-block mt-2 bg-purple-500/20 text-purple-300 text-xs font-body font-medium px-3 py-0.5 rounded-full">
+                  {cat.ageRange}
+                </span>
+                <p className="font-body text-xs text-white/50 mt-3 leading-relaxed">
+                  {cat.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </Container>
     </section>

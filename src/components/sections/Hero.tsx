@@ -59,7 +59,7 @@ export default function Hero() {
           </div>
 
           {/* Modalities preview */}
-          <div className="flex gap-4 mt-4">
+          <div className="flex flex-wrap justify-center gap-3 mt-4">
             {["3km", "5km", "10km"].map((dist) => (
               <span
                 key={dist}
@@ -68,6 +68,9 @@ export default function Hero() {
                 {dist}
               </span>
             ))}
+            <span className="bg-purple-500/20 backdrop-blur-sm rounded-full px-4 py-1 text-sm font-heading font-bold text-purple-300 border border-purple-500/20">
+              Kids & Teens
+            </span>
           </div>
         </div>
       </Container>
