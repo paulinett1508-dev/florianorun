@@ -45,7 +45,7 @@ export default function ComingSoon() {
               {/* Overlay */}
               <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px] flex flex-col items-center justify-center gap-3 border border-white/10 rounded-2xl">
                 <div className="w-10 h-10 rounded-full bg-orange-vibrant/20 flex items-center justify-center">
-                  <Lock className="w-5 h-5 text-orange-vibrant" />
+                  <Lock className="w-5 h-5 text-orange-vibrant" aria-hidden="true" />
                 </div>
                 <h3 className="font-heading text-xl sm:text-2xl font-bold italic text-white uppercase">
                   {section.title}

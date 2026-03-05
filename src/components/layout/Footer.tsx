@@ -15,7 +15,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-white/80 hover:text-orange-vibrant transition-colors"
             >
-              <Instagram className="w-5 h-5" />
+              <Instagram className="w-5 h-5" aria-hidden="true" />
               <span className="font-body text-sm">{EVENT.instagramHandle}</span>
             </a>
           </div>

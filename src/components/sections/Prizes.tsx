@@ -21,7 +21,7 @@ export default function Prizes() {
           {/* Premiação */}
           <div>
             <h3 className="font-heading text-xl font-bold italic text-white uppercase mb-6 flex items-center gap-2">
-              <Trophy className="w-5 h-5 text-orange-vibrant" />
+              <Trophy className="w-5 h-5 text-orange-vibrant" aria-hidden="true" />
               Premiação em Dinheiro
             </h3>
 
@@ -44,7 +44,7 @@ export default function Prizes() {
                     <div className="flex flex-col gap-2">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                          <Medal className={`w-4 h-4 ${podiumColors.first}`} />
+                          <Medal className={`w-4 h-4 ${podiumColors.first}`} aria-hidden="true" />
                           <span className="font-body text-sm text-white/80">
                             1º Lugar
                           </span>
@@ -55,7 +55,7 @@ export default function Prizes() {
                       </div>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                          <Medal className={`w-4 h-4 ${podiumColors.second}`} />
+                          <Medal className={`w-4 h-4 ${podiumColors.second}`} aria-hidden="true" />
                           <span className="font-body text-sm text-white/80">
                             2º Lugar
                           </span>
@@ -66,7 +66,7 @@ export default function Prizes() {
                       </div>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                          <Medal className={`w-4 h-4 ${podiumColors.third}`} />
+                          <Medal className={`w-4 h-4 ${podiumColors.third}`} aria-hidden="true" />
                           <span className="font-body text-sm text-white/80">
                             3º Lugar
                           </span>
@@ -78,7 +78,7 @@ export default function Prizes() {
                     </div>
 
                     <p className="text-white/40 text-xs font-body mt-3 flex items-center gap-1">
-                      <DollarSign className="w-3 h-3" />
+                      <DollarSign className="w-3 h-3" aria-hidden="true" />
                       {prize.extras} · PIX em até 24h
                     </p>
                   </div>
@@ -90,7 +90,7 @@ export default function Prizes() {
           {/* Cronograma */}
           <div>
             <h3 className="font-heading text-xl font-bold italic text-white uppercase mb-6 flex items-center gap-2">
-              <Clock className="w-5 h-5 text-orange-vibrant" />
+              <Clock className="w-5 h-5 text-orange-vibrant" aria-hidden="true" />
               Cronograma do Dia
             </h3>
 
