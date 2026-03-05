@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://florianorun.com.br/sitemap.xml
