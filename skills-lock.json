@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "skills": {
+    "next-best-practices": {
+      "source": "vercel-labs/next-skills",
+      "sourceType": "github",
+      "computedHash": "515ba75178bd44875812d9a560bdf14651f86709f89cf1d4f209638e879807f3"
+    },
+    "seo-audit": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "computedHash": "ec3109d213dde1747614ad1112ef0e498e04b24e464538968e156dfbfadb2121"
+    },
+    "tailwind-v4": {
+      "source": "existential-birds/beagle",
+      "sourceType": "github",
+      "computedHash": "1765f9873060271fe9a0ba7c06465b8fbd6137a0a285a56cb5c38295c6057a5e"
+    },
+    "vercel-react-best-practices": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "computedHash": "3462ec83f862abb2d532953df33a4dbf87f4616849da5d4b5cc7c13601aaf997"
+    }
+  }
+}
