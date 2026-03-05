@@ -13,7 +13,7 @@ export const EVENT = {
   organizerInstagram: '@anderssonedfisica',
   instagram: 'https://www.instagram.com/floriano_run/',
   instagramHandle: '@floriano_run',
-  registrationUrl: '#', // Substituir pelo link real de inscrição
+  registrationUrl: 'https://runtra.com.br/eventos/floriano-run-2026',
   price: 'R$ 90,00',
   priceLabelNote: 'Lote promocional',
 };
