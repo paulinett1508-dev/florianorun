@@ -9,11 +9,6 @@ type ComingSoonSection = {
 
 const sections: ComingSoonSection[] = [
   {
-    title: "Sobre o Evento",
-    description: "5 anos de história, superação e comunidade em Floriano",
-    height: "h-64",
-  },
-  {
     title: "Percurso",
     description: "Mapa detalhado dos percursos de 3km, 5km e 10km",
     height: "h-48",

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, Camera } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { GALLERY_IMAGES } from "@/lib/constants";
@@ -23,22 +23,20 @@ export default function Gallery() {
             {Array.from({ length: 8 }).map((_, i) => (
               <div
                 key={i}
-                className="aspect-square rounded-xl bg-white/5 border border-white/10 flex items-center justify-center"
+                className="aspect-square rounded-xl bg-gradient-to-br from-white/[0.03] to-white/[0.08] border border-white/10 flex items-center justify-center group hover:border-orange-vibrant/20 transition-colors"
               >
-                <div className="text-center">
-                  <div className="w-10 h-10 mx-auto rounded-full bg-orange-vibrant/20 flex items-center justify-center mb-2">
-                    <span className="text-orange-vibrant text-lg">📸</span>
-                  </div>
-                  <p className="text-white/30 text-xs font-body">
-                    Foto {i + 1}
+                <div className="text-center opacity-40 group-hover:opacity-60 transition-opacity">
+                  <Camera className="w-8 h-8 mx-auto text-orange-vibrant/50 mb-2" />
+                  <p className="text-white/40 text-xs font-body">
+                    Em breve
                   </p>
                 </div>
               </div>
             ))}
           </div>
 
-          <p className="text-center text-white/40 text-sm font-body mt-6 italic">
-            Adicione fotos reais em <code className="text-orange-vibrant/60">public/images/gallery/</code> e atualize <code className="text-orange-vibrant/60">constants.ts</code>
+          <p className="text-center text-white/50 text-sm font-body mt-8">
+            Fotos das edições anteriores em breve!
           </p>
         </Container>
       </section>
