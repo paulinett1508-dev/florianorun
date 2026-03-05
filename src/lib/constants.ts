@@ -9,8 +9,11 @@ export const EVENT = {
   location: 'Floriano, Piauí',
   slogan: 'A superação é a nossa linha de chegada!',
   sloganSecondary: 'Vamos fazer você viciar em Adrenalina e Saúde.',
-  organizer: 'Andersson',
+  organizer: 'Anderson Oliveira',
+  coOrganizer: 'Uiara Oliveira',
   organizerInstagram: '@anderssonedfisica',
+  startLocation: 'Av. Frei Antônio Cúrcio (Academia de Saúde)',
+  route: 'Cais da Beira-Rio e Av. Fauzer Bucar',
   instagram: 'https://www.instagram.com/floriano_run/',
   instagramHandle: '@floriano_run',
   registrationUrl: 'https://runtra.com.br/eventos/floriano-run-2026',
@@ -42,6 +45,33 @@ export const MODALITIES = [
   },
 ];
 
+export const EDITIONS = [
+  {
+    year: 2022,
+    edition: '1ª Edição',
+    athletes: 133,
+    cities: 18,
+    states: 2,
+    stateNames: 'PI e MA',
+  },
+  {
+    year: 2023,
+    edition: '2ª Edição',
+    athletes: 168,
+    cities: 18,
+    states: 3,
+    stateNames: 'PI, MA e PE',
+  },
+  {
+    year: 2024,
+    edition: '3ª Edição',
+    athletes: 218,
+    cities: 32,
+    states: 6,
+    stateNames: 'PI, MA, PE, CE, PA e SP',
+  },
+];
+
 export const GALLERY_IMAGES: { src: string; alt: string }[] = [
   // Adicione aqui os nomes dos arquivos de fotos em public/images/gallery/
   // Exemplo: { src: '/images/gallery/foto1.jpg', alt: 'Largada da 4ª edição' },
@@ -64,7 +94,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: 'Onde será a largada e chegada?',
-    answer: 'A largada e chegada serão no mesmo local, no centro de Floriano. O ponto exato será divulgado em breve.',
+    answer: 'A largada e chegada serão na Av. Frei Antônio Cúrcio (altura da Academia de Saúde), com percurso passando pelo Cais da Beira-Rio e Av. Fauzer Bucar.',
   },
 ];
 
