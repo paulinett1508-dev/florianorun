@@ -59,6 +59,21 @@ As inscrições são gerenciadas pelo **Runtra** (externo):
 - URL: https://runtra.com.br/eventos/floriano-run-2026
 - Não temos banco, auth ou pagamento no nosso lado
 
+## Referências de qualidade (agnostic-core)
+Consulte `github.com/paulinett1508-dev/agnostic-core` para padrões aplicados:
+- `skills/frontend/seo-checklist` — SEO técnico e Core Web Vitals
+- `skills/frontend/accessibility` — WCAG 2.1 AA checklist
+- `skills/frontend/ux-guidelines` — UX e touch targets
+- `skills/frontend/tailwind-patterns` — Tailwind v4 patterns
+- `skills/frontend/css-governance` — Tokens e governança CSS
+
+## SEO Estruturado
+- JSON-LD `SportsEvent` em `layout.tsx` (rich results do Google)
+- JSON-LD `FAQPage` gerado automaticamente a partir de `FAQ_ITEMS`
+- Skip-to-content link para acessibilidade
+- `prefers-reduced-motion` respeitado globalmente
+- Focus visible com outline laranja
+
 ## Pendências
 - Fotos reais em `public/images/gallery/` + atualizar GALLERY_IMAGES em constants
 - Logo da Flow Digital no footer (substituir placeholder)
