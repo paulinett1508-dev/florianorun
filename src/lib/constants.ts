@@ -128,8 +128,63 @@ export const EDITIONS = [
 ];
 
 export const GALLERY_IMAGES: { src: string; alt: string }[] = [
-  // Adicione aqui os nomes dos arquivos de fotos em public/images/gallery/
-  // Exemplo: { src: '/images/gallery/foto1.jpg', alt: 'Largada da 4ª edição' },
+  { src: '/images/gallery/largada-2024.jpg', alt: 'Largada da 3ª edição — 2024' },
+  { src: '/images/gallery/chegada-10km.jpg', alt: 'Chegada dos 10km — pódio masculino' },
+  { src: '/images/gallery/kids-medalha.jpg', alt: 'Crianças recebendo medalhas na categoria Kids' },
+  { src: '/images/gallery/aquecimento.jpg', alt: 'Aquecimento coletivo antes da largada' },
+  { src: '/images/gallery/percurso-beira-rio.jpg', alt: 'Atletas no percurso da Beira-Rio' },
+  { src: '/images/gallery/podio-feminino.jpg', alt: 'Pódio feminino 5km — 2024' },
+  { src: '/images/gallery/publico-chegada.jpg', alt: 'Público vibrando na linha de chegada' },
+  { src: '/images/gallery/equipe-organizacao.jpg', alt: 'Equipe de organização da Floriano Run' },
+];
+
+export const ROUTE_INFO = {
+  start: 'Av. Frei Antônio Cúrcio, Bairro Bosque',
+  mainRoute: 'Cais da Beira-Rio e Av. Fauzer Bucar',
+  terrain: 'Asfalto',
+  elevation: 'Plano (variação máx. ~15m)',
+  hydration: '3 pontos de hidratação',
+  routes: [
+    {
+      distance: '3km',
+      description: 'Percurso mais curto — saída pelo Bosque, retorno pela Beira-Rio',
+      color: 'from-green-500 to-green-600',
+    },
+    {
+      distance: '5km',
+      description: 'Percurso intermediário — Bosque, Beira-Rio e trecho da Av. Fauzer Bucar',
+      color: 'from-orange-400 to-orange-600',
+    },
+    {
+      distance: '10km',
+      description: 'Percurso completo — Bosque, Beira-Rio, Av. Fauzer Bucar e volta pelo centro',
+      color: 'from-red-500 to-red-600',
+    },
+  ],
+};
+
+export type Sponsor = {
+  name: string;
+  tier: 'ouro' | 'prata' | 'bronze' | 'apoio';
+  logoPlaceholder: boolean;
+};
+
+export const SPONSORS: Sponsor[] = [
+  { name: 'Patrocinador Ouro 1', tier: 'ouro', logoPlaceholder: true },
+  { name: 'Patrocinador Ouro 2', tier: 'ouro', logoPlaceholder: true },
+  { name: 'Patrocinador Prata 1', tier: 'prata', logoPlaceholder: true },
+  { name: 'Patrocinador Prata 2', tier: 'prata', logoPlaceholder: true },
+  { name: 'Patrocinador Prata 3', tier: 'prata', logoPlaceholder: true },
+  { name: 'Patrocinador Bronze 1', tier: 'bronze', logoPlaceholder: true },
+  { name: 'Patrocinador Bronze 2', tier: 'bronze', logoPlaceholder: true },
+  { name: 'Patrocinador Bronze 3', tier: 'bronze', logoPlaceholder: true },
+  { name: 'Patrocinador Bronze 4', tier: 'bronze', logoPlaceholder: true },
+  { name: 'Apoiador 1', tier: 'apoio', logoPlaceholder: true },
+  { name: 'Apoiador 2', tier: 'apoio', logoPlaceholder: true },
+  { name: 'Apoiador 3', tier: 'apoio', logoPlaceholder: true },
+  { name: 'Apoiador 4', tier: 'apoio', logoPlaceholder: true },
+  { name: 'Apoiador 5', tier: 'apoio', logoPlaceholder: true },
+  { name: 'Apoiador 6', tier: 'apoio', logoPlaceholder: true },
 ];
 
 export const FAQ_ITEMS = [
