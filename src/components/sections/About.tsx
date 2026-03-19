@@ -1,6 +1,7 @@
 import { Calendar, MapPin, Users, TrendingUp } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
+import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 import { EVENT, EDITIONS } from "@/lib/constants";
 
 const highlights = [
@@ -30,10 +31,13 @@ export default function About() {
   return (
     <section id="sobre" className="py-20 sm:py-28 bg-[#0d0d0d]">
       <Container>
-        <SectionHeading subtitle="5 anos de história, superação e comunidade">
-          Sobre o Evento
-        </SectionHeading>
+        <AnimateOnScroll>
+          <SectionHeading subtitle="5 anos de história, superação e comunidade">
+            Sobre o Evento
+          </SectionHeading>
+        </AnimateOnScroll>
 
+        <AnimateOnScroll delay={100}>
         <div className="max-w-3xl mx-auto text-center mb-14">
           <p className="text-white/70 font-body text-base sm:text-lg leading-relaxed">
             A <span className="text-orange-vibrant font-semibold">Floriano Run</span> nasceu
@@ -49,8 +53,10 @@ export default function About() {
             ainda mais energia. {EVENT.sloganSecondary}
           </p>
         </div>
+        </AnimateOnScroll>
 
         {/* Highlights */}
+        <AnimateOnScroll delay={200}>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
           {highlights.map((item) => (
             <div
@@ -69,8 +75,10 @@ export default function About() {
             </div>
           ))}
         </div>
+        </AnimateOnScroll>
 
         {/* Editions timeline */}
+        <AnimateOnScroll delay={300}>
         <div className="max-w-2xl mx-auto">
           <h3 className="font-heading text-xl sm:text-2xl font-bold italic text-center text-white uppercase mb-8">
             Nossa Trajetória
@@ -124,6 +132,7 @@ export default function About() {
             </div>
           </div>
         </div>
+        </AnimateOnScroll>
       </Container>
     </section>
   );

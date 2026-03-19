@@ -5,6 +5,7 @@ import Image from "next/image";
 import { X, ChevronLeft, ChevronRight, Camera } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
+import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 import { GALLERY_IMAGES } from "@/lib/constants";
 
 export default function Gallery() {
@@ -14,11 +15,14 @@ export default function Gallery() {
     return (
       <section id="galeria" className="py-20 sm:py-28 bg-[#0a0a0a]">
         <Container>
-          <SectionHeading subtitle="Momentos das edições anteriores que marcaram história">
-            Galeria
-          </SectionHeading>
+          <AnimateOnScroll>
+            <SectionHeading subtitle="Momentos das edições anteriores que marcaram história">
+              Galeria
+            </SectionHeading>
+          </AnimateOnScroll>
 
           {/* Placeholder grid */}
+          <AnimateOnScroll delay={150}>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
             {Array.from({ length: 8 }).map((_, i) => (
               <div
@@ -34,10 +38,13 @@ export default function Gallery() {
               </div>
             ))}
           </div>
+          </AnimateOnScroll>
 
+          <AnimateOnScroll delay={250}>
           <p className="text-center text-white/50 text-sm font-body mt-8">
             Fotos das edições anteriores em breve!
           </p>
+          </AnimateOnScroll>
         </Container>
       </section>
     );

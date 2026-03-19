@@ -1,6 +1,7 @@
 import { Trophy, Medal, Clock, DollarSign } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
+import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 import { PRIZES, SCHEDULE } from "@/lib/constants";
 
 const podiumColors = {
@@ -13,12 +14,15 @@ export default function Prizes() {
   return (
     <section id="premiacao" className="py-20 sm:py-28 bg-[#0a0a0a]">
       <Container>
-        <SectionHeading subtitle="Confira a premiação e o cronograma do dia">
-          Premiação & Cronograma
-        </SectionHeading>
+        <AnimateOnScroll>
+          <SectionHeading subtitle="Confira a premiação e o cronograma do dia">
+            Premiação & Cronograma
+          </SectionHeading>
+        </AnimateOnScroll>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Premiação */}
+          <AnimateOnScroll delay={100}>
           <div>
             <h3 className="font-heading text-xl font-bold italic text-white uppercase mb-6 flex items-center gap-2">
               <Trophy className="w-5 h-5 text-orange-vibrant" aria-hidden="true" />
@@ -86,8 +90,10 @@ export default function Prizes() {
               )}
             </div>
           </div>
+          </AnimateOnScroll>
 
           {/* Cronograma */}
+          <AnimateOnScroll delay={250}>
           <div>
             <h3 className="font-heading text-xl font-bold italic text-white uppercase mb-6 flex items-center gap-2">
               <Clock className="w-5 h-5 text-orange-vibrant" aria-hidden="true" />
@@ -127,6 +133,7 @@ export default function Prizes() {
               </p>
             </div>
           </div>
+          </AnimateOnScroll>
         </div>
       </Container>
     </section>

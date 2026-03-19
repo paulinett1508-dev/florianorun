@@ -1,6 +1,7 @@
 import { Footprints, Zap, Trophy, Baby, Heart } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
+import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 import Button from "@/components/ui/Button";
 import { MODALITIES, KIDS_CATEGORIES, EVENT } from "@/lib/constants";
 
@@ -20,21 +21,23 @@ export default function Modalities() {
   return (
     <section id="modalidades" className="py-20 sm:py-28 bg-[#0d0d0d]">
       <Container>
-        <SectionHeading
-          subtitle="Escolha o percurso ideal para o seu nível e venha fazer parte dessa festa!"
-        >
-          Modalidades
-        </SectionHeading>
+        <AnimateOnScroll>
+          <SectionHeading
+            subtitle="Escolha o percurso ideal para o seu nível e venha fazer parte dessa festa!"
+          >
+            Modalidades
+          </SectionHeading>
+        </AnimateOnScroll>
 
         {/* Adult modalities */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          {MODALITIES.map((mod) => {
+          {MODALITIES.map((mod, i) => {
             const Icon = icons[mod.icon as keyof typeof icons];
             const gradient = colors[mod.distance as keyof typeof colors];
 
             return (
+              <AnimateOnScroll key={mod.distance} delay={i * 150}>
               <div
-                key={mod.distance}
                 className="group relative bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden hover:border-orange-vibrant/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-orange-vibrant/10"
               >
                 {/* Top gradient bar */}
@@ -90,11 +93,13 @@ export default function Modalities() {
                   </Button>
                 </div>
               </div>
+              </AnimateOnScroll>
             );
           })}
         </div>
 
         {/* Kids & Teens */}
+        <AnimateOnScroll delay={100}>
         <div className="mt-16">
           <h3 className="font-heading text-2xl sm:text-3xl font-bold italic text-center text-white uppercase mb-2">
             Kids & Teens
@@ -132,6 +137,7 @@ export default function Modalities() {
             ))}
           </div>
         </div>
+        </AnimateOnScroll>
       </Container>
     </section>
   );
