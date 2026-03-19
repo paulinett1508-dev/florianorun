@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { EVENT, FAQ_ITEMS } from "@/lib/constants";
 
@@ -118,6 +119,7 @@ export default function RootLayout({
         >
           Pular para o conteúdo
         </a>
+        <Header />
         {children}
         <Footer />
       </body>
