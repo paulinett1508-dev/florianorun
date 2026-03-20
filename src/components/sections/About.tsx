@@ -28,7 +28,7 @@ const highlights = [
 
 export default function About() {
   return (
-    <section id="sobre" className="py-20 sm:py-28 bg-[#0d0d0d]">
+    <section id="sobre" className="py-20 sm:py-28 bg-surface-alt">
       <Container>
         <SectionHeading subtitle="5 anos de história, superação e comunidade">
           Sobre o Evento
@@ -58,7 +58,7 @@ export default function About() {
               className="flex flex-col items-center gap-3 p-6 rounded-xl bg-white/5 border border-white/10 hover:border-orange-vibrant/30 transition-colors"
             >
               <div className="w-12 h-12 rounded-full bg-orange-vibrant/20 flex items-center justify-center">
-                <item.icon className="w-6 h-6 text-orange-vibrant" />
+                <item.icon className="w-6 h-6 text-orange-vibrant" aria-hidden="true" />
               </div>
               <span className="font-heading font-bold text-white text-sm sm:text-base text-center">
                 {item.label}

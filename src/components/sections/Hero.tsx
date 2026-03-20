@@ -68,7 +68,7 @@ export default function Hero() {
                 {dist}
               </span>
             ))}
-            <span className="bg-purple-500/20 backdrop-blur-sm rounded-full px-4 py-1 text-sm font-heading font-bold text-purple-300 border border-purple-500/20">
+            <span className="bg-orange-vibrant/20 backdrop-blur-sm rounded-full px-4 py-1 text-sm font-heading font-bold text-orange-vibrant/80 border border-orange-vibrant/20">
               Kids & Teens
             </span>
           </div>
@@ -76,7 +76,7 @@ export default function Hero() {
       </Container>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce" aria-hidden="true">
         <span className="text-white/40 text-xs font-body uppercase tracking-widest">
           Scroll
         </span>

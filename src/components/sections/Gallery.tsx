@@ -12,7 +12,7 @@ export default function Gallery() {
 
   if (GALLERY_IMAGES.length === 0) {
     return (
-      <section id="galeria" className="py-20 sm:py-28 bg-[#0a0a0a]">
+      <section id="galeria" className="py-20 sm:py-28 bg-surface">
         <Container>
           <SectionHeading subtitle="Momentos das edições anteriores que marcaram história">
             Galeria
@@ -20,13 +20,13 @@ export default function Gallery() {
 
           {/* Placeholder grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-            {Array.from({ length: 8 }).map((_, i) => (
+            {Array.from({ length: 4 }).map((_, i) => (
               <div
                 key={i}
                 className="aspect-square rounded-xl bg-gradient-to-br from-white/[0.03] to-white/[0.08] border border-white/10 flex items-center justify-center group hover:border-orange-vibrant/20 transition-colors"
               >
                 <div className="text-center opacity-40 group-hover:opacity-60 transition-opacity">
-                  <Camera className="w-8 h-8 mx-auto text-orange-vibrant/50 mb-2" />
+                  <Camera className="w-8 h-8 mx-auto text-orange-vibrant/50 mb-2" aria-hidden="true" />
                   <p className="text-white/40 text-xs font-body">
                     Em breve
                   </p>
@@ -55,7 +55,7 @@ export default function Gallery() {
     );
 
   return (
-    <section id="galeria" className="py-20 sm:py-28 bg-[#0a0a0a]">
+    <section id="galeria" className="py-20 sm:py-28 bg-surface">
       <Container>
         <SectionHeading subtitle="Momentos das edições anteriores que marcaram história">
           Galeria
@@ -66,6 +66,7 @@ export default function Gallery() {
             <button
               key={i}
               onClick={() => openLightbox(i)}
+              aria-label={`Abrir foto: ${img.alt}`}
               className="group relative aspect-square rounded-xl overflow-hidden cursor-pointer"
             >
               <Image
@@ -84,17 +85,25 @@ export default function Gallery() {
       {/* Lightbox */}
       {lightboxIndex !== null && (
         <div
+          role="dialog"
+          aria-label="Galeria de fotos"
           className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center"
           onClick={closeLightbox}
+          onKeyDown={(e) => {
+            if (e.key === "Escape") closeLightbox();
+            if (e.key === "ArrowLeft") prevImage();
+            if (e.key === "ArrowRight") nextImage();
+          }}
         >
           <button
             onClick={(e) => {
               e.stopPropagation();
               closeLightbox();
             }}
-            className="absolute top-4 right-4 text-white/80 hover:text-white z-10"
+            aria-label="Fechar galeria"
+            className="absolute top-4 right-4 w-11 h-11 flex items-center justify-center text-white/80 hover:text-white z-10 rounded-full hover:bg-white/10 transition-colors"
           >
-            <X className="w-8 h-8" />
+            <X className="w-8 h-8" aria-hidden="true" />
           </button>
 
           <button
@@ -102,9 +111,10 @@ export default function Gallery() {
               e.stopPropagation();
               prevImage();
             }}
-            className="absolute left-4 text-white/80 hover:text-white z-10"
+            aria-label="Foto anterior"
+            className="absolute left-4 w-11 h-11 flex items-center justify-center text-white/80 hover:text-white z-10 rounded-full hover:bg-white/10 transition-colors"
           >
-            <ChevronLeft className="w-10 h-10" />
+            <ChevronLeft className="w-10 h-10" aria-hidden="true" />
           </button>
 
           <div className="relative w-full max-w-4xl aspect-video mx-4" onClick={(e) => e.stopPropagation()}>
@@ -122,9 +132,10 @@ export default function Gallery() {
               e.stopPropagation();
               nextImage();
             }}
-            className="absolute right-4 text-white/80 hover:text-white z-10"
+            aria-label="Próxima foto"
+            className="absolute right-4 w-11 h-11 flex items-center justify-center text-white/80 hover:text-white z-10 rounded-full hover:bg-white/10 transition-colors"
           >
-            <ChevronRight className="w-10 h-10" />
+            <ChevronRight className="w-10 h-10" aria-hidden="true" />
           </button>
         </div>
       )}

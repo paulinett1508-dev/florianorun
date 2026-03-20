@@ -12,6 +12,11 @@
   --font-heading: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
+  /* Surfaces */
+  --color-surface: #0a0a0a;
+  --color-surface-alt: #0d0d0d;
+  --color-text-muted: #9ca3af;
+
   /* Animations */
   --animate-fade-in-up: fade-in-up 0.6s ease-out forwards;
   --animate-pulse-slow: pulse 3s ease-in-out infinite;
@@ -46,7 +51,7 @@ html {
 
 body {
   font-family: var(--font-body);
-  background: #0a0a0a;
+  background: var(--color-surface);
   color: #ffffff;
 }
 

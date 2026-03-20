@@ -22,7 +22,7 @@ const sections: ComingSoonSection[] = [
 
 export default function ComingSoon() {
   return (
-    <div className="py-16 bg-[#0d0d0d]">
+    <div className="py-16 bg-surface-alt">
       <Container>
         <div className="flex flex-col gap-8">
           {sections.map((section) => (

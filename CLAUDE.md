@@ -69,7 +69,55 @@ Integrado como git submodule em `.agnostic-core/`. Consulte antes de alterar fro
 - `.agnostic-core/skills/frontend/html-css-audit.md` — Auditoria HTML/CSS
 - `.agnostic-core/skills/performance/` — Caching, load testing, performance audit
 - `.agnostic-core/skills/security/` — OWASP, API hardening
+- `.agnostic-core/skills/ux-ui/principios-de-interface.md` — Princípios de interface e estados
 - `.agnostic-core/commands/workflows/` — Brainstorm, create, debug, deploy
+
+### Checklists de Entrega (extraídos do agnostic-core)
+
+#### SEO & Core Web Vitals
+- LCP < 2.5s, INP < 200ms, CLS < 0.1
+- JSON-LD SportsEvent + FAQPage em layout.tsx
+- H1 único, hierarquia H2→H3 sem pular níveis
+- Alt text descritivo em todas as imagens; nomes de arquivo descritivos
+- GEO: FAQ com perguntas naturais para extração por LLMs (ChatGPT/Gemini)
+- Hero image acima-do-fold SEM lazy loading; font-display: swap nas fontes
+
+#### Acessibilidade (WCAG 2.1 AA)
+- Contraste 4.5:1 (texto normal), 3:1 (texto grande)
+- Tab navega tudo; sem focus traps; skip-to-main como 1º focusable
+- prefers-reduced-motion: reduce (animações decorativas desativadas)
+- aria-hidden="true" em ícones decorativos
+- Semântica: <header>, <main>, <nav>, <footer>, <section>
+
+#### UX & Interação
+- Touch targets 44x44px mínimo + 8px espaçamento entre alvos
+- Funcional em 375px (mobile) sem scroll horizontal
+- Hierarquia visual clara: tamanho/peso/posição guiam leitura
+- 16px mínimo corpo mobile; line-height 1.4-1.6 parágrafos
+- Estados: loading (skeleton), empty (explicar + ação), error (mensagem + retry)
+
+#### Tailwind CSS v4
+- Mobile-first: classes base = mobile, sm:/md:/lg:/xl: para maiores
+- Tokens via @theme em globals.css (nunca #hex direto no JSX)
+- motion-safe: / motion-reduce: para animações
+- Sem classes dinâmicas (`text-${cor}-500`); usar mapa explícito
+- Regra dos 3: 3+ usos → extrair componente React
+
+#### CSS Governance
+- Todas as cores via var(--color-*), sem #hex inline
+- Sem inline style="" em HTML; sem !important (exceto override 3rd-party)
+- Não redefinir @keyframes já existentes em globals.css
+
+#### Deploy Checklist
+- Pre-flight: npm run build OK + npm run lint OK + sem secrets no código
+- Smoke test: Hero carrega + countdown funciona + CTAs clicáveis + nav funcional
+- Monitor Vercel pós-deploy: errors, CLS, LCP
+- Rollback: 1 clique no dashboard Vercel
+
+### Agentes de Review
+- **Frontend Review:** "Atue como frontend-reviewer agent. Revise [pasta]."
+- **SEO Specialist:** "Atue como seo-specialist agent. Audit SEO da landing page."
+- Consultar: `.agnostic-core/agents/reviewers/frontend-reviewer.md` e `.agnostic-core/agents/specialists/seo-specialist.md`
 
 ## SEO Estruturado
 - JSON-LD `SportsEvent` em `layout.tsx` (rich results do Google)

@@ -45,8 +45,11 @@ export default function CountdownTimer() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-    setTimeLeft(calculateTimeLeft());
+    // Use requestAnimationFrame to avoid synchronous setState in effect body
+    requestAnimationFrame(() => {
+      setMounted(true);
+      setTimeLeft(calculateTimeLeft());
+    });
 
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());

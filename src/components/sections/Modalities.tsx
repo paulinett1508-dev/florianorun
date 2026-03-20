@@ -18,7 +18,7 @@ const colors = {
 
 export default function Modalities() {
   return (
-    <section id="modalidades" className="py-20 sm:py-28 bg-[#0d0d0d]">
+    <section id="modalidades" className="py-20 sm:py-28 bg-surface-alt">
       <Container>
         <SectionHeading
           subtitle="Escolha o percurso ideal para o seu nível e venha fazer parte dessa festa!"
@@ -43,7 +43,7 @@ export default function Modalities() {
                 <div className="p-6 sm:p-8 flex flex-col items-center text-center gap-4">
                   {/* Icon */}
                   <div className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-orange-vibrant/20 transition-colors">
-                    <Icon className="w-7 h-7 text-orange-vibrant" />
+                    <Icon className="w-7 h-7 text-orange-vibrant" aria-hidden="true" />
                   </div>
 
                   {/* Distance */}
@@ -107,22 +107,22 @@ export default function Modalities() {
             {KIDS_CATEGORIES.map((cat) => (
               <div
                 key={`${cat.title}-${cat.distance}`}
-                className="p-5 rounded-xl bg-white/5 border border-white/10 text-center hover:border-purple-500/30 transition-colors"
+                className="p-5 rounded-xl bg-white/5 border border-white/10 text-center hover:border-blue-petroleo-light/50 transition-colors"
               >
-                <div className="w-10 h-10 mx-auto rounded-full bg-purple-500/20 flex items-center justify-center mb-3">
+                <div className="w-10 h-10 mx-auto rounded-full bg-blue-petroleo/20 flex items-center justify-center mb-3">
                   {cat.title === 'Teens' ? (
-                    <Heart className="w-5 h-5 text-purple-400" />
+                    <Heart className="w-5 h-5 text-blue-petroleo-light" aria-hidden="true" />
                   ) : (
-                    <Baby className="w-5 h-5 text-purple-400" />
+                    <Baby className="w-5 h-5 text-blue-petroleo-light" aria-hidden="true" />
                   )}
                 </div>
                 <p className="font-heading font-black text-2xl text-white">
                   {cat.distance}
                 </p>
-                <p className="font-heading font-bold text-sm text-purple-400 uppercase mt-1">
+                <p className="font-heading font-bold text-sm text-blue-petroleo-light uppercase mt-1">
                   {cat.title}
                 </p>
-                <span className="inline-block mt-2 bg-purple-500/20 text-purple-300 text-xs font-body font-medium px-3 py-0.5 rounded-full">
+                <span className="inline-block mt-2 bg-blue-petroleo/20 text-blue-petroleo-light text-xs font-body font-medium px-3 py-0.5 rounded-full">
                   {cat.ageRange}
                 </span>
                 <p className="font-body text-xs text-white/50 mt-3 leading-relaxed">

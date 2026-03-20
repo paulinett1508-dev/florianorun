@@ -11,7 +11,7 @@ const podiumColors = {
 
 export default function Prizes() {
   return (
-    <section id="premiacao" className="py-20 sm:py-28 bg-[#0a0a0a]">
+    <section id="premiacao" className="py-20 sm:py-28 bg-surface">
       <Container>
         <SectionHeading subtitle="Confira a premiação e o cronograma do dia">
           Premiação & Cronograma

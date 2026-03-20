@@ -13,6 +13,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
     <div className="border border-white/10 rounded-xl overflow-hidden">
       <button
         onClick={() => setOpen(!open)}
+        aria-expanded={open}
         className="w-full flex items-center justify-between gap-4 p-5 text-left hover:bg-white/5 transition-colors cursor-pointer"
       >
         <span className="font-heading font-semibold text-white text-sm sm:text-base">
@@ -41,7 +42,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 
 export default function FAQ() {
   return (
-    <section id="faq" className="py-20 sm:py-28 bg-[#0a0a0a]">
+    <section id="faq" className="py-20 sm:py-28 bg-surface">
       <Container>
         <SectionHeading subtitle="Tire suas dúvidas sobre o evento">
           Perguntas Frequentes
