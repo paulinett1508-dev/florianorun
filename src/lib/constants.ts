@@ -165,5 +165,7 @@ export const FAQ_ITEMS = [
 
 export const DEVELOPER = {
   name: 'Flow Digital - Automações Inteligentes',
-  logoPlaceholder: true,
+  logoPlaceholder: false,
+  logoSrc: '/images/flow-digital-logo.png',
+  logoAlt: 'Logo Flow Digital - Automações Inteligentes',
 };

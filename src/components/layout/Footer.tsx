@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Instagram } from "lucide-react";
 import Container from "@/components/ui/Container";
 import { EVENT, DEVELOPER } from "@/lib/constants";
@@ -26,22 +27,29 @@ export default function Footer() {
           {/* Developer credit */}
           <div className="flex flex-col items-center gap-3">
             <p className="text-white/50 text-xs font-body">Desenvolvido por</p>
-            {DEVELOPER.logoPlaceholder ? (
+            {DEVELOPER.logoSrc ? (
               <div className="flex flex-col items-center gap-1">
-                {/* Espaço reservado para logo da Flow Digital */}
-                <div className="w-40 h-10 border border-dashed border-white/30 rounded flex items-center justify-center">
-                  <span className="text-white/40 text-[10px] font-body">
-                    Logo aqui
-                  </span>
-                </div>
+                <Image
+                  src={DEVELOPER.logoSrc}
+                  alt={DEVELOPER.logoAlt ?? DEVELOPER.name}
+                  width={160}
+                  height={40}
+                  className="object-contain"
+                  priority
+                />
                 <span className="text-white/60 text-xs font-body font-medium">
                   {DEVELOPER.name}
                 </span>
               </div>
             ) : (
-              <span className="text-white/60 text-sm font-body font-medium">
-                {DEVELOPER.name}
-              </span>
+              <div className="flex flex-col items-center gap-1">
+                <div className="w-40 h-10 border border-dashed border-white/30 rounded flex items-center justify-center">
+                  <span className="text-white/40 text-[10px] font-body">Logo aqui</span>
+                </div>
+                <span className="text-white/60 text-xs font-body font-medium">
+                  {DEVELOPER.name}
+                </span>
+              </div>
             )}
           </div>
 
