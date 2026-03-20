@@ -52,10 +52,13 @@ const faqJsonLd = {
   })),
 };
 
+const SITE_URL = "https://florianorun.com.br";
+
 export const metadata: Metadata = {
-  title: "Floriano Run 2026 | 5ª Edição - 26 de Abril",
+  metadataBase: new URL(SITE_URL),
+  title: "Floriano Run 2026 | 5ª Edição - Corrida de Rua em Floriano PI",
   description:
-    "Participe da 5ª edição da Floriano Run! Corrida de rua em Floriano, Piauí. Modalidades de 3km, 5km e 10km. Inscrições a partir de R$90,00.",
+    "Participe da 5ª edição da Floriano Run! Corrida de rua em Floriano, Piauí. Modalidades de 3km, 5km e 10km. 26 de Abril de 2026. Inscrições a partir de R$90,00.",
   keywords: [
     "corrida de rua",
     "Floriano",
@@ -72,22 +75,40 @@ export const metadata: Metadata = {
     title: "Floriano Run 2026 - A superação é a nossa linha de chegada!",
     description:
       "5ª edição da maior corrida de rua de Floriano, Piauí. 26 de Abril de 2026. Modalidades de 3km, 5km e 10km. Inscreva-se!",
+    url: SITE_URL,
     locale: "pt_BR",
     type: "website",
     siteName: "Floriano Run",
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Floriano Run 2026 — 5ª Edição, 26 de Abril, Floriano PI",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Floriano Run 2026 | 5ª Edição",
     description:
       "Corrida de rua em Floriano, PI. 26 de Abril de 2026. 3km, 5km e 10km. Inscreva-se!",
+    images: ["/images/og-image.png"],
   },
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
+  manifest: "/site.webmanifest",
   robots: {
     index: true,
     follow: true,
   },
   alternates: {
-    canonical: "https://florianorun.com.br",
+    canonical: SITE_URL,
   },
 };
 
