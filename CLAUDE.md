@@ -39,10 +39,39 @@ src/
     └── utils.ts            # cn() helper
 ```
 
-## Cores do tema
-- `--color-orange-vibrant: #FF7400` (primária)
-- `--color-blue-petroleo: #3B5775` (secundária)
-- Background: `#0a0a0a` (dark)
+## Identidade Visual (Source of Truth)
+Assets completos em `public/images/id-visual/IDENTIDADE VISUAL - FLORIANO RUN/`.
+PDF de apresentação: `APRESENTAÇÃO.pdf` (7 páginas, Adobe Illustrator).
+
+### Paleta Oficial (4 cores)
+| Token CSS                    | Hex       | Papel                          |
+|------------------------------|-----------|--------------------------------|
+| `--color-orange-vibrant`     | `#FF7400` | Primária, CTAs, destaques      |
+| `--color-creme-oficial`      | `#FFFB7F` | Complementar clara (não usada ainda no CSS) |
+| `--color-blue-petroleo`      | `#3B5775` | Secundária, farol, seções      |
+| *(sem token)*                | `#000000` | Monocromático, texto           |
+| `--color-surface`            | `#0a0a0a` | Background dark do site        |
+
+### Tipografia
+- **Marca (offline):** He's Dead Jim (display) + Oswald (apoio) — em `FONTES/`
+- **Site (web):** Montserrat (headings) + Inter (body) — via Google Fonts
+
+### Logos Disponíveis
+- **OFICIAL** (vertical): 3 tamanhos × 10 variantes de cor
+- **HORIZONTAL**: 3 tamanhos × 10 variantes de cor
+- **Vetorizado:** `LOGO/LOGO VETORIZADA.ai`
+- **Marca d'água:** `MARCA D_AGUA 2.png`
+
+### Variantes Recomendadas por Contexto
+| Contexto       | Variante                    | Motivo                        |
+|----------------|-----------------------------|-------------------------------|
+| Fundo dark     | BRANCO.png ou LARANJA E AZUL.png | Máximo contraste/identidade |
+| Fundo azul     | BRANCO E LARANJA.png        | Leitura sobre petróleo        |
+| Fundo claro    | AZUL E LARANJA.png          | Cores da marca sobre claro    |
+| Monocromático  | PRETO.png ou LARANJA.png    | Versão simplificada           |
+
+### Nota sobre typo
+Na pasta `OFICIAL/` existe "LARNAJA E BRANCO.png" (typo de "LARANJA"). Na `HORIZONTAL/` está correto.
 
 ## Dados do evento
 Todos os dados ficam centralizados em `src/lib/constants.ts`:

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import Container from "@/components/ui/Container";
 import { EVENT } from "@/lib/constants";
@@ -41,18 +42,24 @@ export default function Header() {
     >
       <Container>
         <div className="flex items-center justify-between h-16 sm:h-18">
-          {/* Logo / Event name */}
+          {/* Logo */}
           <a
             href="#"
-            className="font-heading font-black italic uppercase text-lg sm:text-xl tracking-tight"
+            className="flex items-center"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
               closeMobile();
             }}
           >
-            <span className="text-orange-vibrant">Floriano</span>
-            <span className="text-white"> Run</span>
+            <Image
+              src="/images/logo/horizontal-medio-branco.png"
+              alt={EVENT.name}
+              width={160}
+              height={50}
+              priority
+              className="h-8 sm:h-10 w-auto"
+            />
           </a>
 
           {/* Desktop nav */}

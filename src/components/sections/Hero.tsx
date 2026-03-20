@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import CountdownTimer from "./CountdownTimer";
@@ -26,12 +27,17 @@ export default function Hero() {
             </span>
           </div>
 
-          {/* Event name */}
-          <h1 className="font-heading text-5xl sm:text-7xl lg:text-8xl xl:text-9xl font-black italic uppercase tracking-tight">
-            <span className="text-orange-vibrant drop-shadow-lg">Floriano</span>
-            <br />
-            <span className="text-white">Run</span>
-          </h1>
+          {/* Logo oficial do evento */}
+          <Image
+            src="/images/logo/oficial-grande-laranja-azul.png"
+            alt="Floriano Run — Logo oficial do evento"
+            width={480}
+            height={400}
+            priority
+            className="w-64 sm:w-80 md:w-96 lg:w-[420px] h-auto drop-shadow-2xl"
+          />
+          {/* H1 acessível (SEO + screen readers) */}
+          <h1 className="sr-only">{EVENT.name} — {EVENT.edition}</h1>
 
           {/* Date */}
           <p className="font-heading text-lg sm:text-xl lg:text-2xl font-semibold text-white/80 uppercase tracking-widest">

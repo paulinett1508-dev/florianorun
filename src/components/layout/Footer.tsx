@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Instagram } from "lucide-react";
 import Container from "@/components/ui/Container";
 import { EVENT, DEVELOPER } from "@/lib/constants";
@@ -7,6 +8,15 @@ export default function Footer() {
     <footer className="bg-blue-petroleo-dark py-12">
       <Container>
         <div className="flex flex-col items-center gap-8">
+          {/* Logo do evento */}
+          <Image
+            src="/images/logo/horizontal-pequeno-branco.png"
+            alt={EVENT.name}
+            width={120}
+            height={40}
+            className="h-8 w-auto opacity-80"
+          />
+
           {/* Social */}
           <div className="flex flex-col items-center gap-3">
             <a
