@@ -29,12 +29,12 @@ export default function Hero() {
 
           {/* Logo oficial do evento */}
           <Image
-            src="/images/logo/oficial-grande-laranja-azul.png"
+            src="/images/logo/oficial-grande-branco-laranja.png"
             alt="Floriano Run — Logo oficial do evento"
             width={480}
             height={400}
             priority
-            className="w-64 sm:w-80 md:w-96 lg:w-[420px] h-auto drop-shadow-2xl"
+            className="w-64 sm:w-80 md:w-96 lg:w-[420px] h-auto drop-shadow-2xl [filter:drop-shadow(0_0_40px_rgba(255,255,255,0.12))]"
           />
           {/* H1 acessível (SEO + screen readers) */}
           <h1 className="sr-only">{EVENT.name} — {EVENT.edition}</h1>
