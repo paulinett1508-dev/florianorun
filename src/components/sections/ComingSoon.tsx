@@ -1,13 +1,13 @@
 import Container from "@/components/ui/Container";
 import { Lock } from "lucide-react";
 
-type ComingSoonSection = {
+export type ComingSoonSection = {
   title: string;
   description: string;
   height?: string;
 };
 
-const sections: ComingSoonSection[] = [
+const DEFAULT_SECTIONS: ComingSoonSection[] = [
   {
     title: "Percurso",
     description: "Mapa detalhado dos percursos de 3km, 5km e 10km",
@@ -20,7 +20,7 @@ const sections: ComingSoonSection[] = [
   },
 ];
 
-export default function ComingSoon() {
+export default function ComingSoon({ sections = DEFAULT_SECTIONS }: { sections?: ComingSoonSection[] }) {
   return (
     <div className="py-16 bg-[#0d0d0d]">
       <Container>
