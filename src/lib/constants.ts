@@ -23,8 +23,9 @@ export const EVENT = {
   instagramHandle: '@floriano_run',
   registrationUrl: 'https://runtra.com.br/eventos/floriano-run-2026',
   regulationUrl: 'https://runtra.com.br/storage/regulations/floriano-run-2026-regulamento-1772392698.pdf',
-  price: 'R$ 90,00',
-  priceLabelNote: 'Lote promocional',
+  price: 'R$ 108,90',
+  priceLabelNote: '1º Lote',
+  kidsPrice: 'R$ 49,50',
 };
 
 export const SCHEDULE = [
@@ -74,7 +75,7 @@ export const KIDS_CATEGORIES = [
   {
     distance: '500m',
     title: 'Kids',
-    ageRange: '8 a 11 anos',
+    ageRange: '8 a 12 anos',
     description: 'Diversão sem competição! Todos recebem medalha de conclusão.',
   },
   {

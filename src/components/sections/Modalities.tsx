@@ -125,7 +125,10 @@ export default function Modalities() {
                 <span className="inline-block mt-2 bg-blue-petroleo/20 text-blue-petroleo-light text-xs font-body font-medium px-3 py-0.5 rounded-full">
                   {cat.ageRange}
                 </span>
-                <p className="font-body text-xs text-white/50 mt-3 leading-relaxed">
+                <p className="font-heading text-lg font-bold text-blue-petroleo-light mt-3">
+                  {EVENT.kidsPrice}
+                </p>
+                <p className="font-body text-xs text-white/50 mt-1 leading-relaxed">
                   {cat.description}
                 </p>
               </div>
