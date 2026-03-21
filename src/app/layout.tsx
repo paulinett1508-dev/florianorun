@@ -32,7 +32,7 @@ const eventJsonLd = {
   offers: {
     "@type": "Offer",
     url: EVENT.registrationUrl,
-    price: "90.00",
+    price: "108.90",
     priceCurrency: "BRL",
     availability: "https://schema.org/InStock",
     validFrom: "2025-01-01",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Floriano Run 2026 | 5ª Edição - Corrida de Rua em Floriano PI",
   description:
-    "Participe da 5ª edição da Floriano Run! Corrida de rua em Floriano, Piauí. Modalidades de 3km, 5km e 10km. 26 de Abril de 2026. Inscrições a partir de R$90,00.",
+    "Participe da 5ª edição da Floriano Run! Corrida de rua em Floriano, Piauí. Modalidades de 3km, 5km e 10km. 26 de Abril de 2026. Inscrições a partir de R$108,90.",
   keywords: [
     "corrida de rua",
     "Floriano",
