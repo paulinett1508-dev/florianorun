@@ -96,9 +96,11 @@ Integrado como git submodule em `.agnostic-core/`. Consulte antes de alterar fro
 - `.agnostic-core/skills/frontend/tailwind-patterns.md` — Tailwind v4 patterns
 - `.agnostic-core/skills/frontend/css-governance.md` — Tokens e governança CSS
 - `.agnostic-core/skills/frontend/html-css-audit.md` — Auditoria HTML/CSS
+- `.agnostic-core/skills/frontend/menos-e-mais.md` — Auditoria de poluição visual: hierarquia, redundância, espaço
 - `.agnostic-core/skills/performance/` — Caching, load testing, performance audit
 - `.agnostic-core/skills/security/` — OWASP, API hardening
 - `.agnostic-core/skills/ux-ui/principios-de-interface.md` — Princípios de interface e estados
+- `.agnostic-core/skills/workflow/auto-learning-lessons.md` — Documentar correções pós-sessão em LESSONS.md
 - `.agnostic-core/commands/workflows/` — Brainstorm, create, debug, deploy
 
 ### Checklists de Entrega (extraídos do agnostic-core)
